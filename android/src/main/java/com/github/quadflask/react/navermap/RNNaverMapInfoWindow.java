@@ -1,4 +1,4 @@
-package com.reactlibrary;
+package com.github.quadflask.react.navermap;
 
 import android.animation.ObjectAnimator;
 import android.animation.TimeInterpolator;
@@ -66,8 +66,12 @@ public class RNNaverMapInfoWindow extends ClickableRNNaverMapFeature<InfoWindow>
         if (Double.isNaN(feature.getPosition().latitude)) {
             feature.setPosition(finalPosition);
         } else {
-            Property<InfoWindow, LatLng> property = Property.of(InfoWindow.class, LatLng.class, "position");
-            ObjectAnimator animator = ObjectAnimator.ofObject(feature, property, ReactUtil::interpolate, finalPosition);
+            Property<InfoWindow, LatLng> property = Property.of(Marker.class, LatLng.class, "position");
+            ObjectAnimator animator = ObjectAnimator.ofObject(
+                    feature,
+                    property,
+                    ReactUtil::interpolate,
+                    finalPosition);
             animator.setDuration(duration);
             if (easingFunction != null)
                 animator.setInterpolator(easingFunction);

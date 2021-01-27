@@ -1,4 +1,4 @@
-package com.reactlibrary;
+package com.github.quadflask.react.navermap;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -14,7 +14,7 @@ import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.uimanager.ThemedReactContext;
 import com.facebook.react.uimanager.annotations.ReactProp;
 
-import static com.reactlibrary.ReactUtil.toNaverLatLng;
+import static com.github.quadflask.react.navermap.ReactUtil.toNaverLatLng;
 
 public class RNNaverMapInfoWindowManager extends EventEmittableViewGroupManager<RNNaverMapInfoWindow> {
     private final DisplayMetrics metrics;
