@@ -18,6 +18,7 @@
 
 #import "RCTConvert+NMFMapView.h"
 #import "RNNaverMapMarker.h"
+#import "RNNaverMapInfoWindow.h"
 #import "RNNaverMapPolylineOverlay.h"
 #import "RNNaverMapPathOverlay.h"
 #import "RNNaverMapCircleOverlay.h"
@@ -45,7 +46,10 @@
   if ([subview isKindOfClass:[RNNaverMapMarker class]]) {
     RNNaverMapMarker *marker = (RNNaverMapMarker*)subview;
     marker.realMarker.mapView = self.mapView;
-  } else if ([subview isKindOfClass:[RNNaverMapPolylineOverlay class]]) {
+  }  else if ([subview isKindOfClass:[RNNaverMapInfoWindow class]]) {
+     RNNaverMapInfoWindow *infoWindow = (RNNaverMapInfoWindow*)subview;
+     infoWindow.realInfoWindow.mapView = self.mapView;
+  }else if ([subview isKindOfClass:[RNNaverMapPolylineOverlay class]]) {
     RNNaverMapPolylineOverlay *overlay = (RNNaverMapPolylineOverlay*)subview;
     overlay.realOverlay.mapView = self.mapView;
   } else if ([subview isKindOfClass:[RNNaverMapPathOverlay class]]) {
@@ -72,6 +76,9 @@
   if ([subview isKindOfClass:[RNNaverMapMarker class]]) {
     RNNaverMapMarker *marker = (RNNaverMapMarker*)subview;
     marker.realMarker.mapView = nil;
+  } else if ([subview isKindOfClass:[RNNaverMapInfoWindow class]]) {
+     RNNaverMapInfoWindow *infoWindow = (RNNaverMapInfoWindow*)subview;
+     infoWindow.realInfoWindow.mapView = nil;
   } else if ([subview isKindOfClass:[RNNaverMapPolylineOverlay class]]) {
     RNNaverMapPolylineOverlay *overlay = (RNNaverMapPolylineOverlay*)subview;
     overlay.realOverlay.mapView = nil;

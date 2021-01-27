@@ -167,6 +167,17 @@ export interface MarkerProps extends MapOverlay {
 export declare class Marker extends Component<MarkerProps> {
     render(): JSX.Element;
 }
+export interface InfoWindowProps extends MapOverlay {
+	title?: string;
+	radius?: number;
+	color?: string;
+	outlineWidth?: number;
+	outlineColor?: string;
+	zIndex?: number;
+}
+export declare class InfoWindow extends Component<InfoWindowProps> {
+	render(): JSX.Element;
+}
 export interface CircleProps extends MapOverlay {
     radius?: number;
     color?: string;

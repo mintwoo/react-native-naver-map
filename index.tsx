@@ -11,6 +11,7 @@ const RNNaverMapPathOverlay = requireNativeComponent('RNNaverMapPathOverlay');
 const RNNaverMapPolylineOverlay = requireNativeComponent('RNNaverMapPolylineOverlay');
 const RNNaverMapCircleOverlay = requireNativeComponent('RNNaverMapCircleOverlay');
 const RNNaverMapPolygonOverlay = requireNativeComponent('RNNaverMapPolygonOverlay');
+const RNNaverMapInfoWindow = requireNativeComponent('NMInfoWindow');
 
 export interface Coord {
     latitude: number;
@@ -254,6 +255,16 @@ export class Marker extends Component<MarkerProps> {
                 haloColor: parseColor(this.props.caption.haloColor),
             }}/>
     }
+}
+
+export interface InfoWindowProps extends MapOverlay {
+	title?: string;
+}
+
+export class InfoWindow extends Component<InfoWindowProps> {
+	render() {
+		return <RNNaverMapInfoWindow {...this.props} />;
+	}
 }
 
 export interface CircleProps extends MapOverlay {
