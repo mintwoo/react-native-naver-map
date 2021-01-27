@@ -34,7 +34,7 @@ import com.naver.maps.geometry.LatLng;
 import com.naver.maps.map.overlay.InfoWindow;
 import com.naver.maps.map.overlay.OverlayImage;
 
-public class RNNaverMapInfoWindow extends ClickableNMFeature<InfoWindow> {
+public class RNNaverMapInfoWindow extends ClickableRNNaverMapFeature<InfoWindow> {
     private final DraweeHolder<GenericDraweeHierarchy> imageHolder;
     private boolean animated = false;
     private int duration = 500;
