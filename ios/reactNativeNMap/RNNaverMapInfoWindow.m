@@ -11,7 +11,7 @@
 #import <NMapsMap/NMFInfoWindowDefaultTextSource.h>
 
 #import "RNNaverMapView.h"
-#import "NMMarker.h"
+#import "RNNaverMapMarker.h"
 
 @implementation RNNaverMapInfoWindow {
 }
