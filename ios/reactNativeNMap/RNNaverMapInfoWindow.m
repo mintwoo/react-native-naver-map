@@ -10,7 +10,7 @@
 #import <NMapsMap/NMFOverlayImage.h>
 #import <NMapsMap/NMFInfoWindowDefaultTextSource.h>
 
-#import "NMNMFMapView.h"
+#import "RNNaverMapView.h"
 #import "NMMarker.h"
 
 @implementation RNNaverMapInfoWindow {

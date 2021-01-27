@@ -12,7 +12,7 @@
 #import <NMapsMap/NMFInfoWindow.h>
 #import <NMapsMap/NMFInfoWindowDefaultTextSource.h>
 
-#import "NMNMFMapView.h"
+#import "RNNaverMapView.h"
 
 @interface RNNaverMapInfoWindow : UIView
 

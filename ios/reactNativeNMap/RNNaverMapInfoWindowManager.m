@@ -4,7 +4,7 @@
 #import <NMapsMap/NMGLatLng.h>
 #import <NMapsMap/NMFInfoWindowDefaultTextSource.h>
 
-#import "NMNMFMapView.h"
+#import "RNNaverMapView.h"
 
 @implementation RNNaverMapInfoWindowManager
 
