@@ -66,7 +66,7 @@ public class RNNaverMapInfoWindow extends ClickableRNNaverMapFeature<InfoWindow>
         if (Double.isNaN(feature.getPosition().latitude)) {
             feature.setPosition(finalPosition);
         } else {
-            Property<InfoWindow, LatLng> property = Property.of(Marker.class, LatLng.class, "position");
+            Property<InfoWindow, LatLng> property = Property.of(InfoWindow.class, LatLng.class, "position");
             ObjectAnimator animator = ObjectAnimator.ofObject(
                     feature,
                     property,
